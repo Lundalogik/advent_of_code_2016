@@ -1,4 +1,4 @@
-package test
+package demo
 
 class Day1a {
 
@@ -19,7 +19,7 @@ class Day1a {
         case 2 => (0, -1)
         case 3 => (-1, 0)
       }
-      val walk = (head(1).asDigit * directionCoord._1, head(1).asDigit * directionCoord._2)
+      val walk = (head.substring(1).toInt * directionCoord._1, head.substring(1).toInt* directionCoord._2)
 
       val newPath = findPath(instructions.tail, newDirection)
       (walk._1 + newPath._1, walk._2 + newPath._2)
